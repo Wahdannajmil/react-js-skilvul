@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css';
+import Home from './pages/Home';
+import About from './pages/About';
+import Header from './componen/Header';
+import Jumbotron from './componen/Jumbotron';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+    <div className='App'>
+      <Header/>
+      <Jumbotron/>
+    {/* <Router>
+      <Routes>
+        <Route path = '/' element={<Header/>} />
+        <Route path = '/' element={<Jumbotron/>} />v 
+      </Routes>
+    </Router> */}
+    </div> //////////////////
+  )
+} 
 
 export default App;
+ 
